@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Olympia on Instagram</title>
+<link rel="shortcut icon" type="image/ico" href="images/favicon.gif" /> 
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+<script src="js/lightbox.js"></script>
+<script>
+
+
+$(document).ready(function() {
+     var url="";
+     var token="26778084.0dbb2ff.76da39cc1d0b4878b64fc7f132813bf7";
+    $("#search").submit(function() { 
+    //getting the search tag from textbox  
+    var searchText = $("#searchText").val();
+    url="https://api.instagram.com/v1/tags/"+searchText+"/media/recent?access_token=26778084.0dbb2ff.76da39cc1d0b4878b64fc7f132813bf7";
+    getImages(url);
+    return false;
+    });
+
+    $("#href0").click(function(){
+    url="https://api.instagram.com/v1/tags/teamgermany/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+
+    $("#href1").click(function(){
+    url="https://api.instagram.com/v1/tags/olympics/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href2").click(function(){
+    url="https://api.instagram.com/v1/tags/london/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href3").click(function(){
+    url="https://api.instagram.com/v1/tags/olympictorch/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href4").click(function(){
+    url="https://api.instagram.com/v1/media/search?lat=51.497203826&lng=-0.197497621&distance=500&access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href5").click(function(){
+    url="https://api.instagram.com/v1/tags/olympicswimming/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href6").click(function(){
+    url="https://api.instagram.com/v1/tags/olympictennis/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+    $("#href7").click(function(){
+    url="https://api.instagram.com/v1/users/20944806/media/recent?access_token="+token;
+    getImages(url);
+    return false;
+    });
+});
+
+function getImages(url){
+    //removing the the last images of the search if there were any 
+    $('.instaImg').remove();
+    //making the ajax call
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: url,
+        success: function(data) {
+            for (var i=0; i <=12; i++) {
+                var image = data.data[i].images.standard_resolution.url
+                $("#images").append("<a href='"+image+"' rel='lightbox[insta]' title='Alternately you can press the right arrow key.' ><img src="+data.data[i].images.thumbnail.url+" alt='Plants: image 2 0f 4 thumb' class='instaImg'/></a>")
+
+            };
+    }
+    });
+}
+
+</script>
+</head>
+<body>
+<div id="container1">
+    <div id="headline">Instagram Images</div>
+    <form id="search">
+      <input id="searchText" value="Search Instagram" name="search" onblur="if(value=='') value = 'Search Instagram'" onfocus="if(value=='Search Instagram') value = ''"  />
+      <input type="submit" value="Search" />
+    </form>
+    <nav>
+      <a id="href0" href="">Team Germany</a> 
+      <a id="href1" href="">Olympics</a> 
+      <a id="href2" href="">London</a> 
+      <a id="href3" href="">OlympicTorch</a>
+      <a id="href4" href=""><img src="icons/location.png" alt='location icon' id="iconLocation"/>Olympic Village</a>
+      <a id="href7" href="">Michael Phelps</a>  <br>
+      <a id="href5" href=""><img src="icons/swimming.jpeg" alt='swimming icon' class="iconImage"/></a>
+      <a id="href6" href=""><img src="icons/tennis.jpeg" alt='tennis incon' class="iconImage"/></a> 
+    </nav>
+
+</div>
+
+<div id="images"></div>
+
+</body>
+</html>
+

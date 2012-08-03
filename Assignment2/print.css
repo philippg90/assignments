@@ -1,0 +1,50 @@
+body
+{
+
+font-family:Garamond;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+ div#contact{
+width: 100%; 
+float: right;
+border: none;
+ }
+div#education
+{
+width: 100%; 
+margin-bottom: -30px;
+float: right;
+border: none;
+}
+div#technicalSkills{
+width: 100%; 
+margin-bottom: -40px; 
+float: right;
+border: none;
+}
+div#experience{
+width: 100%; 
+margin-bottom: -40px;
+float: right;
+border: none;
+}
+div#certificates{
+width: 100%; 
+margin-bottom: -40px;
+float: right;
+border: none;
+}
+ div#languages{
+ width: 100%; 
+float: right;
+border: none;
+ }
+div#internship1Info{
+	margin-bottom: 80px;
+}
+div#links{
+	display: block;
+}

@@ -1,0 +1,53 @@
+body{
+	background-color: black;
+	text-align: center;
+
+}
+
+#headline{
+	color: white;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 100px;
+}
+#href1{
+  border: solid 2px rgba(255,255,255,1);
+   -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+
+}
+#href2{
+  border: solid 2px rgba(255,255,255,1);
+   -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+   
+}
+#href3{
+  border: solid 2px rgba(255,255,255,1);
+   -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+   
+}

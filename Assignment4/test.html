@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+	<meta charset="utf-8">
+	<title>Olympia on Instagram</title>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+  <link href='http://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+    $("#search").submit(function() { 
+    //getting the search tag from textbox  
+    var searchText = $("#searchText").val();
+    getImages(searchText);
+    return false;
+    });
+    $("#href1").click(function(){
+    getImages("Olympics");
+    return false;
+    });
+    $("#href2").click(function(){
+    getImages("London");
+    return false;
+    });
+    $("#href3").click(function(){
+    getImages("OlympicTorch");
+    return false;
+    });
+});
+
+function getImages(searchText){
+    //removing the the last images of the search if there were any 
+    $("img").remove();
+    //making the ajax call
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        cache: false,
+        url: "https://api.instagram.com/v1/tags/"+searchText+"/media/recent?access_token=26778084.0dbb2ff.76da39cc1d0b4878b64fc7f132813bf7",
+        success: function(data) {
+            for (var i=0; i <= 6; i++) {
+                var image = data.data[i].images.standard_resolution.url
+                $("#images").append("<a href='"+image+"' rel='lightbox[insta]' title='Alternately you can press the right arrow key.' ><img src="+data.data[i].images.thumbnail.url+" alt='Plants: image 2 0f 4 thumb' /></a>")
+            };
+    }
+    });
+}
+
+</script>
+</head>
+
+<body>
+<div id="container1">
+  <div id="headline">Instagram Images</div>
+    <nav>
+      <a id="href1" href="">Olympics</a> |
+      <a id="href2" href="">London</a> |
+      <a id="href3" href="">OlympicTorch</a> |
+    </nav>
+</div>
+
+<form id="search">
+  <input id="searchText" value="Hello there" />
+  <input type="submit" value="Search" />
+</form>
+
+<div id="images">
+
+</div>
+
+</body>
+</html>

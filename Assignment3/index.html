@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery Exercises</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+// write a script to show an alert when button is clicked
+function alertButton(){
+	alert("Button was clicked");
+}
+</script>
+<script type="text/javascript">
+// write a script that hides the RED box when "hide is clicked, and shows it when show is clicked
+function hideBox(){
+	document.getElementById('hidebox').style.visibility='hidden';
+}
+function showBox(){
+	document.getElementById('hidebox').style.visibility='visible';
+}
+</script>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript"> 
+// write a script that slides the ORANGE box when "Click to slide box" is clicked
+$(document).ready(function(){
+  $("#clickslide").click(function(){
+    $("#slider").slideToggle("slow");
+  });
+});
+</script>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+// write a script that fades the MAROON box when the THE BOX is clicked
+$(document).ready(function(){
+	$("#fadeBackButton").hide();
+  $("#fader").click(function(){
+    $("#fader").fadeOut("slow",function(){
+    	$("#fadeBackButton").show();
+    	$("#fadeBackButton").click(function(){
+	 $("#fader").fadeIn("slow");
+    $("#fadeBackButton").hide();
+});
+    });
+  });
+ });
+
+</script>
+<script type="text/javascript" src="jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
+  <script>
+  //write a script that makes the green box resizeable after clicking the resize the green box button
+  $(document).ready(function() {
+    $("#resizeButton").click(function(){
+          $("#animator").css({"resize":"both"});
+          $("#animator").css({"overflow":"auto"});
+        });
+  });
+  </script>
+
+<script type="text/javascript">
+// write a script that makes the logo dragable
+  $(document).ready(function() {
+    $("#draggable").draggable();
+  });
+</script>
+
+
+</script>
+
+<link href="jquery.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css"> 
+div.panel,p.flip
+{
+margin:0px;
+padding:5px;
+text-align:center;
+background:#FCC;
+border:solid 1px #c3c3c3;
+text:
+}
+div.panel
+{
+height:450px;
+display:none;
+}
+#draggable{
+	position:relative;
+ }
+</style>
+
+</head>
+
+<body>
+<button onclick="alertButton()">Click Me</button>
+<div id="hide" onclick="hideBox()"> Hide </div>
+
+<div id="show" onclick="showBox()"> Show </div>
+
+<div id="hidebox">
+	<p>I'm a ghost.</p>
+  </div>
+   
+<div id="clickslide">
+	<p> Click to slide box </p>
+</div>
+
+<div id="slider">
+	<p> Oh hey, I slide. </p>
+</div>
+
+<p>This box will fade into oblivion if you click on it...</p>
+
+<div id="fader">
+</div>
+
+<input type="button" id="fadeBackButton"  value="Bring the brown box back!!11"/>
+
+<br /><br />
+
+<button id="resizeButton">Resize this green box!</button>
+
+<div id="animator">
+</div>
+
+<h2>Please drag me!</h2>
+<div id="draggable">
+<img src="logo.jpeg" border="0"/> 
+</div>
+
+ 
+
+
+</body>
+</html>
+

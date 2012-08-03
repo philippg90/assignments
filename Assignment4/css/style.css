@@ -1,0 +1,116 @@
+body{
+	background-color: black;
+	text-align: center;
+
+}
+
+#headline{
+	color: white;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size: 100px;
+	padding-bottom: 5px;
+}
+#href0{
+
+  color: white;
+  
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#000000),
+    color-stop(0.10, #000000),
+    color-stop(0.50, #ff0000),
+    color-stop(0.75, #ffdd00),
+    to(#ffdd00));
+  border: solid 0px rgba(255,255,255,1);
+           border-radius: 6px;
+  box-shadow:
+    0px 0px 0px rgba(000,000,000,0),
+    inset 0px 0px 0px rgba(255,000,217,0);
+  text-shadow:
+    0px 1px 0px rgba(255,255,255,0);
+       height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+}
+
+#href1{
+  border: solid 2px rgba(255,255,255,1);
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+
+}
+#href2{
+  border: solid 2px rgba(255,255,255,1);
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+   
+}
+#href3{
+  border: solid 2px rgba(255,255,255,1);
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+ 
+}
+#href4{
+  border: solid 2px rgba(255,255,255,1);
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+ 
+}
+#href7{
+  border: solid 2px rgba(255,255,255,1);
+           border-radius: 6px;
+   height: 20px;
+   padding: 5px;
+   display: inline;
+   text-align: center;
+   color: rgba(255,255,255,1);
+   text-transform: uppercase;
+   text-decoration: none;
+   
+ 
+}
+#search{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#iconLocation{
+  height: 20px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+.iconImage{
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
